@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>لَمّة</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#07111f;color:white;font-family:Arial,sans-serif}
+header{padding:18px;position:sticky;top:0;background:#07111f;border-bottom:1px solid #26364d}
+h1{margin:0;font-size:30px}
+.tabs{display:flex;gap:8px;margin-top:15px}
+.tabs button,.nav button{border:0;color:#ccd7e8;background:#142238;padding:10px;border-radius:18px}
+.tabs .active{background:#1877ff;color:white}
+main{padding:15px 15px 90px}
+.page{display:none}
+.page.active{display:block}
+.card{background:#101d2e;border:1px solid #26364d;border-radius:18px;padding:16px;margin-bottom:14px}
+input,textarea{width:100%;padding:14px;background:#081523;border:1px solid #314663;border-radius:14px;color:white;font-size:16px}
+.actions{display:flex;justify-content:space-around;margin-top:15px;padding-top:12px;border-top:1px solid #26364d}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.item{text-align:center}
+.icon{font-size:45px;margin:15px}
+.need{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.need button{padding:18px 4px;border:0;border-radius:15px;background:#172a43;color:white}
+.blue{width:100%;background:#1877ff;color:white;border:0;padding:14px;border-radius:14px;font-size:17px}
+.chat{padding:15px;border-bottom:1px solid #26364d}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#0b1625;border-top:1px solid #26364d;display:flex;justify-content:space-around;padding:9px 3px}
+.nav button{background:none;padding:5px;font-size:12px}
+.nav button.active{color:#3d96ff}
+.nav b{display:block;font-size:23px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>لَمّة</h1>
+<div>العالم أقرب 🌍</div>
+<div class="tabs">
+<button class="active">لك</button>
+<button>مدينتي</button>
+<button>العالم</button>
+<button>أتابعهم</button>
+</div>
+</header>
+
+<main>
+
+<section id="home" class="page active">
+<div class="card">
+<input placeholder="شنو تحب تشارك اليوم؟">
+</div>
+
+<div class="card">
+<h3>أحمد ✓</h3>
+<small>الموصل • قبل 5 دقائق</small>
+<p>أبحث عن مكان هادئ للدراسة قريب من الجامعة. عندكم اقتراح؟</p>
+<div class="actions">
+<span>♡ إعجاب</span>
+<span>◯ تعليق</span>
+<span>↗ مشاركة</span>
+</div>
+</div>
+
+<div class="card">
+<h3>سارة</h3>
+<small>إسطنبول • قبل ساعة</small>
+<p>لقطات من رحلتي اليوم 🌍</p>
+<div style="height:220px;background:#126ce5;border-radius:15px;display:grid;place-items:center;font-size:70px">🌆</div>
+</div>
+</section>
+
+
+<section id="need" class="page">
+<h2>أحتاج</h2>
+<div class="card">
+<p>قل شتحتاج ولَمّة توصلك للناس المناسبين</p>
+
+<div class="need">
+<button>🛠️<br>خدمة</button>
+<button>🛒<br>شراء</button>
+<button>🏷️<br>بيع</button>
+<button>💼<br>عمل</button>
+<button>❓<br>معلومة</button>
+<button>🤝<br>مساعدة</button>
+</div>
+
+<br>
+<textarea rows="4" placeholder="اكتب طلبك..."></textarea>
+<br><br>
+<button class="blue" onclick="alert('تم نشر طلبك تجريبياً')">انشر الطلب</button>
+</div>
+</section>
+
+
+<section id="market" class="page">
+<h2>السوق</h2>
+<div class="grid">
+
+<div class="card item">
+<div class="icon">📱</div>
+<b>هاتف مستعمل</b>
+<p>$450</p>
+</div>
+
+<div class="card item">
+<div class="icon">💻</div>
+<b>لابتوب</b>
+<p>$390</p>
+</div>
+
+<div class="card item">
+<div class="icon">🚗</div>
+<b>سيارة</b>
+<p>$12,500</p>
+</div>
+
+<div class="card item">
+<div class="icon">🛋️</div>
+<b>أثاث</b>
+<p>$220</p>
+</div>
+
+</div>
+</section>
+
+
+<section id="messages" class="page">
+<h2>الرسائل</h2>
+
+<div class="card">
+<div class="chat"><b>علي</b><br><small>تمام، نتفق على الموعد 👍</small></div>
+<div class="chat"><b>نور</b><br><small>أرسلت صورة</small></div>
+<div class="chat"><b>مجموعة السفر</b><br><small>3 رسائل جديدة</small></div>
+</div>
+</section>
+
+
+<section id="groups" class="page">
+<h2>المجتمعات</h2>
+
+<div class="card">
+<h3>🌍 السفر حول العالم</h3>
+<p>245 ألف عضو</p>
+<button class="blue">انضم</button>
+</div>
+
+<div class="card">
+<h3>🚘 سيارات</h3>
+<p>32 ألف عضو</p>
+<button class="blue">انضم</button>
+</div>
+
+<div class="card">
+<h3>💼 وظائف وفرص عمل</h3>
+<p>41 ألف عضو</p>
+<button class="blue">انضم</button>
+</div>
+
+</section>
+
+</main>
+
+
+<nav class="nav">
+
+<button class="active" onclick="showPage('home',this)">
+<b>⌂</b>
+الرئيسية
+</button>
+
+<button onclick="showPage('market',this)">
+<b>▣</b>
+السوق
+</button>
+
+<button onclick="showPage('need',this)">
+<b>＋</b>
+أحتاج
+</button>
+
+<button onclick="showPage('messages',this)">
+<b>✉</b>
+الرسائل
+</button>
+
+<button onclick="showPage('groups',this)">
+<b>◎</b>
+المجتمعات
+</button>
+
+</nav>
+
+
+<script>
+function showPage(id,button){
+
+document.querySelectorAll('.page').forEach(function(page){
+page.classList.remove('active');
+});
+
+document.getElementById(id).classList.add('active');
+
+document.querySelectorAll('.nav button').forEach(function(btn){
+btn.classList.remove('active');
+});
+
+button.classList.add('active');
+
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
